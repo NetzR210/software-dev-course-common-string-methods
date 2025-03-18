@@ -101,3 +101,107 @@ console.log({
   firstCharacter,
   extractedBootcamp,
 });
+
+// Practice Problem 1
+
+// Activity 1. Searching Strings
+
+// Check if "JavaScript" is in the string
+let str = "Learning JavaScript is fun!";
+console.log(str.includes("JavaScript")); // true
+
+// Find the position of "fun"
+console.log(str.indexOf("fun")); // 22
+
+
+// Activity 2. Transforming Strings
+
+// Transform the string
+let codeStr = " CODE BOOTCAMP ";
+let transformedStr = codeStr.trim().toLowerCase().replace("bootcamp", "JavaScript");
+console.log(transformedStr); // "code javascript"
+
+
+// Activity 3. Breaking Apart a Sentence
+
+// Split the sentence into an array of words
+let sentence = "Coding is fun and educational";
+let wordsArray = sentence.split(" ");
+console.log(wordsArray); // ["Coding", "is", "fun", "and", "educational"]
+
+
+// Activity 4. Retrieving Substrings
+
+// Retrieve the first character of "Bootcamp"
+let word = "Bootcamp";
+console.log(word.charAt(0)); // "B"
+
+// Extract the word "camp" from "Bootcamp"
+console.log(word.slice(4)); // "camp"
+
+
+// Advanced Challenge
+
+let customerInfo = `
+Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50
+`;
+
+// Extract the customer name
+let customerName = customerInfo.match(/Customer: (.+)/)[1];
+console.log(customerName); // "John Doe"
+
+// Split the order into an array of items
+let orderArray = customerInfo.match(/Order: (.+)/)[1].split(", ");
+console.log(orderArray); // ["Apple", "Banana", "Grape"]
+
+// Convert the total price to uppercase
+let total = customerInfo.match(/Total: (.+)/)[1];
+console.log(`TOTAL: ${total}`); // "TOTAL: $20.50"
+
+
+// Practice Problem 2
+
+// Task 1. Searching
+
+let hasJavaScript = inputString.includes("JavaScript"); // Check if "JavaScript" is in the string
+let codingPosition = inputString.indexOf("Coding"); // Find the position of "Coding"
+let startsWithWelcome = inputString.trim().startsWith("Welcome"); // Check if it starts with "Welcome"
+let endsWithToday = inputString.trim().endsWith("today."); // Check if it ends with "today."
+
+
+// Task 2. Transforming 
+
+let lowercaseString = inputString.toLowerCase(); // Convert to lowercase
+let uppercaseString = inputString.toUpperCase(); // Convert to uppercase
+let trimmedString = inputString.trim(); // Remove extra spaces
+let replacedString = inputString.replace("JavaScript", "coding"); // Replace "JavaScript" with "coding"
+
+
+// Task 3. Breaking Apart
+
+let wordsArray = inputString.trim().split(" "); // Split into an array of words
+
+
+// Task 4. Retrieving
+
+let firstCharacter = inputString.trim().charAt(0); // Retrieve the first character of the trimmed string
+let extractedBootcamp = inputString.slice(inputString.indexOf("Bootcamp"), inputString.indexOf("Bootcamp") + 8); // Extract "Bootcamp"
+
+
+// Log all results 
+
+console.log({
+  hasJavaScript,
+  codingPosition,
+  startsWithWelcome,
+  endsWithToday,
+  lowercaseString,
+  uppercaseString,
+  trimmedString,
+  replacedString,
+  wordsArray,
+  firstCharacter,
+  extractedBootcamp,
+});
